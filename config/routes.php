@@ -77,3 +77,12 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->fallbacks(DashedRoute::class);
 });
+
+Router::connect(
+    '/users/login',
+    [
+        'plugin' => 'CakeDC/Users',
+        'controller' => 'Users',
+        'action' => 'login'
+    ]
+);
